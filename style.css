@@ -1,0 +1,481 @@
+/* ------------------------------
+   GENERAL PAGE STYLE
+-------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #bffcff, #5ddde0, #159ca6);
+  color: #083b40;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* ------------------------------
+   FLOATING EMOJIS
+-------------------------------- */
+
+.floating-emojis {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-emojis span {
+  position: absolute;
+  font-size: 30px;
+  animation: float 8s infinite ease-in-out;
+  opacity: 0.85;
+}
+
+.floating-emojis span:nth-child(1) {
+  left: 5%;
+  top: 10%;
+}
+
+.floating-emojis span:nth-child(2) {
+  left: 85%;
+  top: 15%;
+}
+
+.floating-emojis span:nth-child(3) {
+  left: 15%;
+  top: 70%;
+}
+
+.floating-emojis span:nth-child(4) {
+  left: 80%;
+  top: 65%;
+}
+
+.floating-emojis span:nth-child(5) {
+  left: 50%;
+  top: 5%;
+}
+
+.floating-emojis span:nth-child(6) {
+  left: 90%;
+  top: 85%;
+}
+
+.floating-emojis span:nth-child(7) {
+  left: 5%;
+  top: 45%;
+}
+
+.floating-emojis span:nth-child(8) {
+  left: 45%;
+  top: 90%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-30px) rotate(15deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+
+/* ------------------------------
+   MAIN BIRTHDAY CARD
+-------------------------------- */
+
+.birthday-card {
+  width: min(900px, 92%);
+  margin: 40px auto;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 90, 100, 0.25);
+
+  backdrop-filter: blur(10px);
+}
+
+
+/* ------------------------------
+   HERO SECTION
+-------------------------------- */
+
+.hero {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.small-title {
+  color: #168f9a;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(45px, 8vw, 85px);
+  color: #078a95;
+  text-shadow: 2px 2px 8px rgba(0, 130, 140, 0.2);
+}
+
+.hero h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(30px, 5vw, 50px);
+  color: #07565d;
+  margin-top: 10px;
+}
+
+
+/* ------------------------------
+   PHOTO SECTION
+-------------------------------- */
+
+.photo-section {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.photo-container {
+  width: min(330px, 90%);
+  margin: auto;
+  position: relative;
+}
+
+.birthday-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 8px solid #38cbd0;
+
+  box-shadow:
+    0 10px 30px rgba(0, 120, 130, 0.3);
+
+  display: block;
+}
+
+
+/* Birthday emoji "hat" */
+
+.birthday-hat {
+  position: absolute;
+  top: -35px;
+  right: 15%;
+
+  font-size: 70px;
+
+  z-index: 2;
+
+  transform: rotate(15deg);
+
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.15));
+}
+
+.birthday-boy-text {
+  margin-top: 18px;
+  font-family: "Dancing Script", cursive;
+  font-size: 32px;
+  color: #087d87;
+}
+
+.birthday-boy-text span {
+  font-weight: bold;
+  color: #e63973;
+}
+
+
+/* ------------------------------
+   BIRTHDAY CAKE
+-------------------------------- */
+
+.cake-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.cake {
+  position: relative;
+  width: 250px;
+  margin: auto;
+  padding-top: 70px;
+}
+
+.number {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 55px;
+  font-weight: bold;
+
+  color: #0b9aa5;
+
+  text-shadow:
+    0 4px 10px rgba(0, 120, 130, 0.3);
+}
+
+.cake-top {
+  background: #ffffff;
+  border-radius: 30px 30px 10px 10px;
+
+  padding: 10px;
+
+  border: 4px solid #40cbd0;
+
+  font-size: 25px;
+}
+
+.cake-body {
+  font-size: 130px;
+  line-height: 1;
+
+  margin-top: -10px;
+
+  filter:
+    drop-shadow(0 10px 10px rgba(0, 90, 100, 0.2));
+}
+
+
+/* ------------------------------
+   LETTER
+-------------------------------- */
+
+.letter {
+  background: linear-gradient(135deg, #ffffff, #e2ffff);
+
+  padding: clamp(25px, 5vw, 55px);
+
+  border-radius: 25px;
+
+  border-left: 7px solid #20b9c1;
+
+  box-shadow:
+    0 10px 25px rgba(0, 120, 130, 0.12);
+
+  margin: 40px 0;
+
+  line-height: 1.8;
+}
+
+.letter h2 {
+  font-family: "Dancing Script", cursive;
+
+  text-align: center;
+
+  font-size: clamp(32px, 5vw, 50px);
+
+  color: #087c86;
+
+  margin-bottom: 25px;
+}
+
+.letter p {
+  margin-bottom: 18px;
+
+  font-size: 16px;
+}
+
+.special-message {
+  font-weight: bold;
+
+  color: #07808a;
+
+  font-size: 18px;
+}
+
+.signature {
+  text-align: right;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 26px;
+
+  color: #087d87;
+
+  margin-top: 30px;
+}
+
+.signature span {
+  color: #e63973;
+}
+
+
+/* ------------------------------
+   MUSIC SECTION
+-------------------------------- */
+
+.music-section {
+  text-align: center;
+
+  padding: 35px 20px;
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(135deg, #087f88, #20c8ce);
+
+  color: white;
+
+  margin: 40px 0;
+}
+
+.music-section h2 {
+  font-family: "Dancing Script", cursive;
+
+  font-size: 45px;
+
+  margin-bottom: 10px;
+}
+
+.music-section p {
+  margin-bottom: 20px;
+}
+
+.music-section audio {
+  width: min(400px, 90%);
+}
+
+
+/* ------------------------------
+   FINAL MESSAGE
+-------------------------------- */
+
+.final-message {
+  text-align: center;
+
+  padding: 45px 15px;
+
+  background:
+    linear-gradient(135deg, #c9ffff, #ffffff);
+
+  border-radius: 25px;
+
+  border: 3px dashed #20b9c1;
+}
+
+.final-message h2 {
+  font-family: "Dancing Script", cursive;
+
+  font-size: 40px;
+
+  color: #087d87;
+}
+
+.final-message h1 {
+  margin: 15px 0;
+
+  color: #0795a0;
+
+  font-size: clamp(30px, 6vw, 60px);
+}
+
+.final-message p {
+  font-size: 17px;
+
+  margin-bottom: 25px;
+}
+
+.hearts {
+  font-size: 30px;
+
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+/* ------------------------------
+   FOOTER
+-------------------------------- */
+
+footer {
+  text-align: center;
+
+  padding: 30px 20px 50px;
+
+  color: white;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 28px;
+
+  position: relative;
+
+  z-index: 1;
+
+  text-shadow:
+    1px 2px 5px rgba(0, 70, 80, 0.3);
+}
+
+
+/* ------------------------------
+   MOBILE FRIENDLY
+-------------------------------- */
+
+@media (max-width: 600px) {
+
+  .birthday-card {
+    padding: 18px;
+    margin: 20px auto;
+  }
+
+  .hero {
+    padding: 20px 5px;
+  }
+
+  .birthday-hat {
+    font-size: 55px;
+    top: -28px;
+  }
+
+  .letter {
+    padding: 25px 20px;
+  }
+
+  .letter p {
+    font-size: 15px;
+  }
+
+  .signature {
+    font-size: 23px;
+  }
+
+  .music-section h2 {
+    font-size: 35px;
+  }
+
+}
