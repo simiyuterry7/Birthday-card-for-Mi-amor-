@@ -479,3 +479,185 @@ footer {
   }
 
 }
+/* ------------------------------
+   JAVASCRIPT FLOATING DECORATIONS
+-------------------------------- */
+
+.floating-decoration {
+  position: fixed;
+
+  bottom: -50px;
+
+  z-index: 5;
+
+  pointer-events: none;
+
+  animation: floatUp linear forwards;
+}
+
+
+@keyframes floatUp {
+
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+
+}
+
+
+/* ------------------------------
+   BIRTHDAY SURPRISE POPUP
+-------------------------------- */
+
+.birthday-surprise {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 70, 75, 0.65);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  z-index: 100;
+
+  transition: opacity 0.5s ease;
+}
+
+
+.surprise-box {
+  position: relative;
+
+  width: min(500px, 95%);
+
+  text-align: center;
+
+  padding: 45px 25px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(135deg, #ffffff, #c8ffff);
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.3);
+
+  animation: popIn 0.6s ease;
+}
+
+
+@keyframes popIn {
+
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+
+.surprise-box h1 {
+  font-family: "Dancing Script", cursive;
+
+  color: #078a95;
+
+  font-size: clamp(35px, 7vw, 60px);
+
+  margin-bottom: 15px;
+}
+
+
+.surprise-box p {
+  color: #07565d;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  margin: 12px 0;
+}
+
+
+.surprise-cake {
+  font-size: 90px;
+
+  margin: 10px 0;
+}
+
+
+.surprise-hearts {
+  font-size: 30px;
+
+  margin-top: 20px;
+}
+
+
+.close-surprise {
+  position: absolute;
+
+  top: 12px;
+
+  right: 18px;
+
+  border: none;
+
+  background: transparent;
+
+  font-size: 35px;
+
+  color: #078a95;
+
+  cursor: pointer;
+}
+
+
+/* ------------------------------
+   CONFETTI
+-------------------------------- */
+
+.confetti {
+  position: fixed;
+
+  top: -20px;
+
+  width: 12px;
+
+  height: 12px;
+
+  background: #20c8ce;
+
+  z-index: 50;
+
+  pointer-events: none;
+
+  animation: fall linear forwards;
+}
+
+
+@keyframes fall {
+
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  to {
+    transform: translateY(110vh) rotate(720deg);
+  }
+
+       }
